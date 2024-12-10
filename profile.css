@@ -56,7 +56,6 @@ header{
     text-decoration: none;
     color: rgb(147, 225, 247);
     padding: 0px 10px;
-    transform: translateX(10px);
 }
 
 ul{
@@ -100,7 +99,7 @@ a{
 
 span{
     font-size: 14px;
-    font-weight: 600px;
+    font-weight: 400px;
 }
 
 .special{
