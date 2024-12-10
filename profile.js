@@ -1,4 +1,10 @@
 const paragraphs = document.querySelectorAll("p");
+let isActive = false;
+
+function toggleBoolean() {
+    isActive = !isActive;
+    console.log(isActive);
+}
 
 paragraphs.forEach(paragraph => {
 const text = paragraph.textContent;
@@ -12,7 +18,10 @@ function typeWriter() {
         setTimeout(typeWriter, 1);
     } else {
         typing = false;
-        paragraph.style.color = 'rgb(147, 225, 247)';
+        if (isActive == false)
+            paragraph.style.color = 'rgb(147, 225, 247)';
+        else
+            paragraph.style.color = 'black';
     }
 }
 
@@ -21,7 +30,10 @@ paragraph.addEventListener("mouseover", () => {
         typing = true;
         index = 0;
         paragraph.textContent = "";
-        paragraph.style.color = 'cyan';
+        if (isActive == false)
+            paragraph.style.color = 'cyan';
+        else
+            paragraph.style.color = 'lightgrey'
         typeWriter();
     }
 });
@@ -36,4 +48,27 @@ click_me.addEventListener('click', () => {
     } else {
         infor.style.display = 'none';
     }
+});
+
+var inf = document.querySelector(".info");
+const h2 = document.querySelector("h2");
+const h3 = document.querySelectorAll("h3");
+const para = document.querySelector("p");
+const ul = document.querySelectorAll("ul");
+const sec = document.querySelectorAll("section");
+var body = document.body;
+color.addEventListener('click', ()=>{
+    body.classList.toggle("white-mode");
+    h2.classList.toggle("grey-mode");
+    para.classList.toggle("grey-mode");
+    inf.classList.toggle("grey-mode");
+    toggleBoolean();
+    ul.forEach(function(ul)
+    {
+        ul.classList.toggle("grey-mode");
+    });
+    h3.forEach(function(h3)
+    {
+        h3.classList.toggle("grey-mode");
+    });
 });

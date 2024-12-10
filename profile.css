@@ -35,7 +35,6 @@ header{
     border-radius: 30px 20px 20px 30px; 
     justify-content: center;
 }
-
 .image_profile{
     background-color: rgb(107, 97, 97);
     text-align: left;
@@ -43,6 +42,14 @@ header{
     flex-direction: column;
     border: 2px solid  rgb(107, 97, 97);
     border-radius: 0px 20px 20px 0px;
+}
+@media (max-width: 420px) {
+    header {
+        grid-template-columns: 1fr;
+    }
+    .image_profile{
+        border-radius: 16px 28px;
+    }
 }
 
 .cont{
@@ -56,4 +63,38 @@ ul{
     padding: 0px 22px;
     border: 2px solid grey;
     border-radius: 4px;
+}
+#color{
+    position: absolute;
+    top: 4px;
+    transform: translateX(-10px);
+}
+
+.change{
+    position: relative;
+}
+
+.white-mode {
+    background-color: white;
+    color: rgb(255, 250, 250);  /* Set text color to black for readability */
+}
+
+.grey-mode{
+    background-color:rgb(255, 254, 254);
+    color: black;
+}
+
+.grey-mode:hover{
+    background-color: rgb(173, 170, 170);
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600px;
+    font-size: 12px;
+    cursor: pointer;
+}
+span{
+    font-size: 14px;
+    font-weight: 600px;
 }
