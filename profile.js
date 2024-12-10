@@ -33,7 +33,7 @@ paragraph.addEventListener("mouseover", () => {
         if (isActive == false)
             paragraph.style.color = 'cyan';
         else
-            paragraph.style.color = 'lightgrey'
+            paragraph.style.color = 'lightgrey';
         typeWriter();
     }
 });
@@ -56,6 +56,8 @@ const h3 = document.querySelectorAll("h3");
 const para = document.querySelector("p");
 const ul = document.querySelectorAll("ul");
 const sec = document.querySelectorAll("section");
+const span = document.querySelectorAll("span");
+const a = document.querySelectorAll("a");
 var body = document.body;
 color.addEventListener('click', ()=>{
     body.classList.toggle("white-mode");
@@ -63,6 +65,14 @@ color.addEventListener('click', ()=>{
     para.classList.toggle("grey-mode");
     inf.classList.toggle("grey-mode");
     toggleBoolean();
+    span.forEach(function(span)
+    {
+        span.classList.toggle("special");
+    });
+    a.forEach(function(a)
+    {
+        a.classList.toggle("special");
+    });
     ul.forEach(function(ul)
     {
         ul.classList.toggle("grey-mode");

@@ -56,6 +56,7 @@ header{
     text-decoration: none;
     color: rgb(147, 225, 247);
     padding: 0px 10px;
+    transform: translateX(10px);
 }
 
 ul{
@@ -72,6 +73,7 @@ ul{
 
 .change{
     position: relative;
+    transform: translateX(10px);
 }
 
 .white-mode {
@@ -87,6 +89,7 @@ ul{
 .grey-mode:hover{
     background-color: rgb(173, 170, 170);
 }
+
 a{
     text-decoration: none;
     color: white;
@@ -94,7 +97,24 @@ a{
     font-size: 12px;
     cursor: pointer;
 }
+
 span{
     font-size: 14px;
     font-weight: 600px;
+}
+
+.special{
+    background-color: rgb(107, 97, 97);
+    color: white;
+    width: fit-content;
+    border-radius: 4px;
+}
+
+.link:hover{
+    background-color: lightgrey;
+    color: black;
+    border-bottom: .5px solid black;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px rgb(58, 57, 57);
+    padding: 0px 2px;
 }
