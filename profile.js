@@ -87,53 +87,72 @@ const homepage = document.getElementById('home');
 const x_o = document.getElementById('xo');
 const play = document.getElementById('play');
 const allCells = document.querySelectorAll('table td');
-
-x_o.addEventListener('click', ()=>{
+const game = document.getElementById('game');
+x_o.addEventListener('click', () => {
     homepage.style.display = 'none';
+    game.style.display = 'flex';
+    let isGameOver = false; // Track game state
 
-    allCells.forEach((cell,index)=>{
+    // Initialize cell styles
+    allCells.forEach((cell, index) => {
         cell.style.color = 'black';
-        if(index % 2 === 0)
-            cell.style.backgroundColor = 'lightgrey';
-        else
-            cell.style.backgroundColor = 'lightcyan';
+        cell.textContent = ''; // Clear any existing text
+        cell.style.backgroundColor = index % 2 === 0 ? 'lightgrey' : 'lightcyan';
     });
 
+    // Add click listeners to cells
     allCells.forEach((cell) => {
         cell.addEventListener('click', (event) => {
+            if (isGameOver) return; // Stop further moves if the game is over
+
             let clickedCell = event.target;
             if (clickedCell.textContent === '') {
                 // Player 'x' move
                 clickedCell.textContent = 'x';
 
                 let win = checkWinner();
-    
-                // Check if a player has won
+
+                // Check if the player has won
                 if (win) {
-                    if (win === 'x') {
-                        alert('YOU WIN!');
-                    } else {
-                        alert('YOU LOST!');
-                    }
-                    return 1;
+                    handleGameEnd(win);
+                    return;
                 }
+
                 // AI move (Player 'o')
-                let winner = makeAIMove();
-                if (winner)
-                {
-                    allCells.forEach((cell) => {
-                        cell.textContent = '';
-                    });
+                makeAIMove();
+
+                // Check if the AI has won
+                win = checkWinner();
+                if (win) {
+                    handleGameEnd(win);
                 }
             }
         });
     });
 
-    play.addEventListener('click', () => {
-        allCells.forEach((cell) => {
+    // Reset the board on "Play" button click
+    play.addEventListener('click', resetBoard);
+
+    // Function to reset the board
+    function resetBoard() {
+        isGameOver = false;
+        allCells.forEach((cell, index) => {
             cell.textContent = '';
+            cell.style.color = 'black';
+            cell.style.backgroundColor = index % 2 === 0 ? 'lightgrey' : 'lightcyan';
         });
-    });
+    }
+
+    // Function to handle game end
+    function handleGameEnd(winner) {
+        isGameOver = true; // Stop further moves
+        if (winner === 'x') {
+            alert('YOU WIN!');
+        } else if (winner === 'o') {
+            alert('YOU LOST!');
+        }
+        resetBoard(); // Clear the board after the game ends
+    }
 });
 
 function checkWinner() {
@@ -287,7 +306,17 @@ function makeAIMove() {
         cell3.textContent = 'o';
     else if (c3 === 'x' && c7 === 'x' && cell5.textContent === '')
         cell5.textContent = 'o';
-
+    else if (c5 != 'x' && c5 != 'o')
+        cell5.textContent = 'o';
+    //not winable:
+    else if (c1 != 'x' && c1 != 'o')
+        cell1.textContent = 'o';
+    else if (c3 != 'x' && c3 != 'o')
+        cell3.textContent = 'o';
+    else if (c7 != 'x' && c7 != 'o')
+        cell7.textContent = 'o';
+    else if (c9 != 'x' && c9 != 'o')
+        cell9.textContent = 'o';
     else {
         // If no winning move, make a random move
         let emptyCells = Array.from(allCells).filter((cell) => cell.textContent === '');
@@ -297,3 +326,9 @@ function makeAIMove() {
         }
     }
 }
+
+const backpage = document.getElementById('back');
+backpage.addEventListener('click', ()=>{
+    homepage.style.display = 'block';
+    game.style.display = 'none';
+});
