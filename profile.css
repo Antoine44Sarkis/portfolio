@@ -117,3 +117,23 @@ span{
     box-shadow: 1px 1px 1px 1px rgb(58, 57, 57);
     padding: 0px 2px;
 }
+
+#game {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    width: 280px;
+    height: 280px;
+}
+td{
+    font-size: 30px;
+    width: 33.33%;
+    height: 33.33%;
+    padding: 0 0;
+    font-weight: bolder;
+}
