@@ -4,23 +4,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>antoinesarkis.com</title>
         <link rel="stylesheet" href="profile.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
     <body>
-        <div id="home">
             <header>
                 <h1>Antoine Sarkis</h1>
                 <div class="image_profile">
-                    <a href="" class="cont">contact Info :<br></br></a>
-                    <span class="cont">Whatsapp : +961 76 409 440</span>
-                    <span class="cont">Email : antoinesarkis44@gmail.com</span>
+                    <button id="contact-btn" onclick="more_i();">contact Info :</button>
+                    <h6 id="more_info">*click on "contact info" to see more details*</h6>
+                    <span class="cont" id="info1">Whatsapp : +961 76 409 440</span>
+                    <span class="cont" id="info2">Email : antoinesarkis44@gmail.com</span>
                     <div class="change">
                         <span class="cont">White Mode :</span>
                         <input type="checkbox" id="color">
                     </div> 
                 </div>
             </header>
-            <h2>Web Developer</h2>
-            <p>Currently a student at 42 School and a self-learning, aspiring Web Designer/Developer.</p>
+            <div class="tools"><h4  id="h" class="clicked">Home</h4><h4 id="ab" class="clicked">About me</h4><h4 id="p" class="clicked" >Projects</h4></div>
+            <div id="home">
+            <section id="for_home">
+                <h3 class="aw"><span id="anime-web"></span></h3>
+                <p>Currently a student at 42 School and a self-learning, aspiring Web Designer/Developer.</p>
+                
+            </section>
             <section id="about">
                 <h3 id="click-button">About</h3>
                 <p class="info" id="inform">I graduated with a Master’s degree in Physics, specializing in Radiation and Matter Interaction. After shifting my career to programming, I’ve become a dedicated, self-motivated learner, continuously pushing myself to develop my skills and grow into a proficient programmer.
@@ -47,10 +53,14 @@
                     <a href="casino.signin" class="link">Link : Casino Game</a>
                     <li>Project 2: x_o scores </li>
                     <button class="link" id="xo">play x_o</button>
+                    <li>Project 3: rock-paper-sissors scores </li>
+                    <button class="link" id="r_p_s_btn">play r-p-s</button>
                 </ul>
         </div>
         <div id="game">
             <h1>PLAY THE GAME :</h1>
+            <h3><span>Wins : </span><span id="win-s" class="scores">0</span> <span> looses : </span><span class="scores" id="loss-s">0</span></h3>
+            <span id="mode">choose mode : <h4 id="easy">easy</h4> <h4 id="medium">medium</h4> <h4 id="hard" h4>hard</h4></span>
             <table>
                 <tr>
                     <td id="cell1"></td>
@@ -68,9 +78,26 @@
                     <td id="cell9"></td>
                 </tr>
             </table>
-            <button id="play">play</button>
+            <button id="play">play again</button>
             <button id="back">back to home page</button>
         </div>
+        <div id="game2">
+            <h1>PLAY THE GAME :</h1>
+            <h3><span>Wins : </span><span id="w-s" class="scores">0</span> <span> looses : </span><span class="scores" id="l-s">0</span><span>draws : </span><span id="d-s" class="scores">0</span></h3>
+            <div>
+                <div style="background-color: rgb(114, 113, 113);
+                border-radius: 20px; width: fit-content; padding: 0px 20px;">computer Choose : <span id="comp"></span></div>
+                <i class="fas fa-hand-rock" id="rock" onclick="play_r_p_s('rock');"></i>
+                <span class="pos_tex1">rock</span>
+                <i class="fas fa-hand-paper" id="paper" onclick="play_r_p_s('paper');"></i>
+                <span class="pos_tex2">paper</span>
+                <i class="fas fa-hand-scissors" id="sissor" onclick="play_r_p_s('scissor');"></i>
+                <span class="pos_tex3">scissor</span>
+            </div>
+            <button id="back2" style="margin-top: 20px;">back to home page</button>
+        </div>
         <script src="profile.js"></script>
+        <script src="x_o.js"></script>
+        <script src="r_p_s.js"></script>
     </body>
 </html>

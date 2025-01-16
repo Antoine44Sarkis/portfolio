@@ -3,22 +3,23 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: rgb(147, 225, 247);
-    background-color: rgb(85, 88, 88);
+    /* background-color: rgb(85, 88, 88); */
+    background-image: url('backpic1.jpg');
+    background-size: cover; /* Ensures the image covers the entire body */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; 
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
 }
-h2, h3{
+h3{
     border-bottom :1px solid rgb(156, 147, 147);
     border-radius: 6px;
     padding: 0px 8px;
+    background-color: rgb(145, 143, 143);
     width: fit-content;
 }
-h2:hover, h3:hover{
-    border-left: 1px solid rgb(156, 147, 147);
-    border-right: 1px solid rgb(156, 147, 147);
-    background-color: rgb(128, 117, 117);
-}
+
 p{
     background-color: rgb(97, 97, 91);
     padding: 0px 4px;
@@ -34,15 +35,24 @@ header{
     border: 2px solid transparent;
     border-radius: 30px 20px 20px 30px; 
     justify-content: center;
+    background-image: url('backpic.jpg');
+    background-size: cover; /* Ensures the image covers the entire body */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; 
 }
 .image_profile{
-    background-color: rgb(107, 97, 97);
+    background-image: url('backpic1.jpg');
+    background-size: cover; /* Ensures the image covers the entire body */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; 
     text-align: left;
     display: flex;
     flex-direction: column;
-    border: 2px solid  rgb(107, 97, 97);
-    border-radius: 0px 20px 20px 0px;
+    border: 2px solid  transparent;
+    /* border: 2px solid  rgb(107, 97, 97); */
+    border-radius: 10px 20px 20px 10px;
 }
+
 @media (max-width: 420px) {
     header {
         grid-template-columns: 1fr;
@@ -118,7 +128,7 @@ span{
     padding: 0px 2px;
 }
 
-#game {
+#game{
     text-align: center;
     flex-direction: column;
     align-items: center;
@@ -136,4 +146,116 @@ td{
     height: 33.33%;
     padding: 0 0;
     font-weight: bolder;
+}
+
+.tools{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+h4{
+    width: fit-content;
+    border: 2px solid rgb(139, 136, 136);
+    text-wrap: nowrap;
+    padding: 4px 4px;
+    border-top: .1px solid rgb(82, 120, 129);
+    border-left: .1px solid rgb(82, 120, 129);
+    border-radius: 2px;
+}
+
+h4:hover{
+    background-color: rgb(109, 108, 108);
+    cursor: pointer;
+}
+
+#contact-btn{
+    background-color: rgba(144, 145, 146, 0.877);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 15px 10px;
+    padding: 2px;
+    color: rgb(138, 248, 248);
+}
+
+#contact-btn:hover{
+    background-color: rgb(180, 178, 178);
+    color: rgb(29, 29, 31);
+}
+
+#mode{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 239, 239);
+    padding: 0px 12px;
+    border-radius: 20px;
+    color: black;
+}
+
+h6{
+    font-size: x-small;
+    padding: 0px 10px;
+    margin: 18px 0px 10px 0px;
+    color: rgb(247, 249, 250);
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+#anime-web {
+    font-size: larger;
+    font-weight: bolder;
+    font-family: Arial, sans-serif;
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden;
+    border-right: 3px solid #e8ebee;
+    display: inline-block;
+}
+.aw{
+    width: 180px;
+    padding-top: 2px;
+}
+
+.scores{
+    background-color: rgb(250, 245, 245);
+    padding: 5px;
+    border-radius: 50%;
+    color: black;
+    margin: 0px 2px;
+}
+
+.fas.fa-hand-rock , .fas.fa-hand-paper, .fas.fa-hand-scissors{
+    font-size: 20px;
+    color: #ffbc04;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(53, 52, 52);
+    border-radius: 50%;
+    width: fit-content;
+    padding: 15px;
+}
+
+.fas.fa-hand-rock:hover , .fas.fa-hand-paper:hover, .fas.fa-hand-scissors:hover{
+    background-color: lightgrey;
+}
+.pos_tex1, .pos_tex2, .pos_tex3 {
+    position: absolute;
+    transform: translate(-55px, 55px);
+    font-size: 18px;
+    padding: 0px 0px;
+}
+
+#game2{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
