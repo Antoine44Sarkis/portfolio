@@ -153,6 +153,7 @@ td{
     flex-direction: row;
     align-items: center;
     justify-content: left;
+    position: relative;
 }
 
 h4{
@@ -297,4 +298,60 @@ h6{
 }
 .fas.fa-backspace:hover{
     cursor: pointer;
+}
+
+img {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 0;
+}
+
+img:nth-child(1) {
+    top: 0px;
+    left: 50px;
+    animation: anime 100s infinite;
+}
+
+img:nth-child(2) {
+    top: 75px;
+    left: 250px;
+    animation: anime2 90s infinite;
+}
+
+img:nth-child(3) {
+    top: 250px;
+    left: 150px;
+    animation: anime 80s infinite;
+}
+
+img:nth-child(4) {
+    top: 175px;
+    right: 30px;
+    animation: anime2 120s infinite;
+}
+
+
+@keyframes anime {
+    0% {
+        transform: rotateZ(0deg) translate(0, 0);
+    }
+    50%{
+        transform: rotate(180deg) translate(1000px, 200px);
+    }
+    100%{
+        transform: rotate(360deg) translate(-1000px, -200px);
+    }
+}
+
+@keyframes anime2 {
+    0% {
+        transform: rotateZ(0deg) translate(0, 0);
+    }
+    50%{
+        transform: rotate(-180deg) translate(-1000px, -200px);
+    }
+    100%{
+        transform: rotate(360deg) translate(1000px, 200px);
+    }
 }
