@@ -3,7 +3,6 @@ let isActive = false;
 
 function toggleBoolean() {
     isActive = !isActive;
-    console.log(isActive);
 }
 
 paragraphs.forEach(paragraph => {

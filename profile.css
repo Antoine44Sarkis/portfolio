@@ -262,6 +262,7 @@ h6{
 
 #Grid {
     display: grid;
+    position: relative;
     gap: 0px; /* Spacing between grid items */
     grid-template-columns: 45px 45px 45px 45px; /* Defines column widths */
     grid-template-rows: 45px 45px 45px 45px 45px 45px 45px;    /* Defines row heights */
@@ -293,4 +294,7 @@ h6{
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+.fas.fa-backspace:hover{
+    cursor: pointer;
 }
