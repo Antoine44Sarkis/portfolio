@@ -1,6 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     font-size: 16px;
+    min-height: 100%;
     line-height: 1.5;
     color: rgb(147, 225, 247);
     /* background-color: rgb(85, 88, 88); */
@@ -11,6 +12,7 @@ body {
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 h3{
     border-bottom :1px solid rgb(156, 147, 147);
@@ -18,14 +20,15 @@ h3{
     padding: 0px 8px;
     background-color: rgb(145, 143, 143);
     width: fit-content;
+    z-index: 10;
 }
 
 p{
     background-color: rgb(97, 97, 91);
     padding: 0px 4px;
+    position: relative;
     border: 2px solid grey;
     border-radius: 4px;
-    position: relative;
     z-index: 1;
 }
 header{
@@ -41,6 +44,7 @@ header{
     background-size: cover; /* Ensures the image covers the entire body */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; 
+    z-index: 10;
 }
 .image_profile{
     background-image: url('backpic1.jpg');
@@ -53,6 +57,7 @@ header{
     border: 2px solid  transparent;
     /* border: 2px solid  rgb(107, 97, 97); */
     border-radius: 10px 20px 20px 10px;
+    z-index: 10;
 }
 
 @media (max-width: 420px) {
@@ -68,6 +73,9 @@ header{
     text-decoration: none;
     color: rgb(147, 225, 247);
     padding: 0px 10px;
+    background-color: #979694;
+    z-index: 10;
+    border-radius: 1px;
 }
 
 ul{
@@ -75,6 +83,7 @@ ul{
     padding: 0px 22px;
     border: 2px solid grey;
     border-radius: 4px;
+    z-index: 10;
 }
 #color{
     position: absolute;
@@ -112,12 +121,14 @@ a{
 span{
     font-size: 14px;
     font-weight: 400px;
+    z-index: 10;
 }
 
 .special{
     background-color: rgb(107, 97, 97);
     color: white;
     width: fit-content;
+    z-index: 10;
     border-radius: 4px;
 }
 
@@ -166,6 +177,7 @@ h4{
     border-top: .1px solid rgb(82, 120, 129);
     border-left: .1px solid rgb(82, 120, 129);
     border-radius: 2px;
+    z-index: 10;
 }
 
 h4:hover{
@@ -203,8 +215,11 @@ h6{
     font-size: x-small;
     padding: 0px 10px;
     margin: 18px 0px 10px 0px;
-    color: rgb(247, 249, 250);
+    border-radius: 20px;
+    width: fit-content;
+    background-color: rgb(148, 144, 144);
     display: block;
+    z-index: 10;
 }
 
 .hide{
@@ -216,12 +231,12 @@ h6{
     font-weight: bolder;
     font-family: Arial, sans-serif;
     white-space: nowrap; /* Prevent wrapping */
-    overflow: hidden;
+    overflow-x: hidden;
     border-right: 3px solid #e8ebee;
     display: inline-block;
 }
 .aw{
-    width: 180px;
+    width: 0px;
     padding-top: 2px;
 }
 
@@ -356,4 +371,72 @@ img:nth-child(4) {
     100%{
         transform: rotate(360deg) translate(1000px, 200px);
     }
+}
+
+@keyframes name {
+    50%{
+        background: linear-gradient(to right bottom, rgb(6, 226, 241) , white, rgb(1, 104, 248));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: brightness(200%);
+    }
+    100%{
+        background: linear-gradient(to right bottom, rgb(1, 104, 248) , white, rgb(6, 226, 241));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+#game3{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+#place {
+    background-color: #0a0a0a;
+    width: 240px;
+    height: 240px;
+    position: relative;
+    overflow: hidden; /* Ensures snake can't go outside visually */
+}
+
+#food {
+    position: absolute;
+    background-color: #e77305;
+    width: 12px;
+    height: 12px;
+    left: 60px; /* Center the food */
+    top: 60px;
+}
+
+#snake {
+    background-color: blue;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 120px;
+    left: 120px;
+}
+
+button.move {
+    margin: 5px;
+}
+
+
+#left{
+    transform: translate(-26px, 24px);
+    margin: 0px 0px;
+}
+#right{
+    transform: translate(26.5px, 2px);
+    margin: 0px 0px;
+}
+#up{
+    transform: translateY(-41.5px);
+    margin: 0px 0px;
+}
+#down{
+    transform: translateY(-39.5px);
+    margin: 0px 0px;
 }

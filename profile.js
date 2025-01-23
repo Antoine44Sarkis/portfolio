@@ -163,13 +163,15 @@ function more_i(){
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const text = "Web Developer";
+    const text = "Hi I'm a Web Developer";
     const element = document.getElementById("anime-web");
+    const backcolor = document.getElementsByClassName('aw')[0];
     let index = 0;
 
     function typeletter() {
         if (index < text.length) {
             element.textContent += text.charAt(index);
+            backcolor.style.width = `${(index + 1) * 13}px`;
             index++;
             setTimeout(typeletter, 200);
         } else {

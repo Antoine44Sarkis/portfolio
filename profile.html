@@ -7,12 +7,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
     <body>
-        <img src="planet1.png" class="planete">
-        <img src="planet2.png" class="planete">
-        <img src="planet3.png" class="planete">
-        <img src="planet4.png" class="planete">
             <header>
-                <h1>Antoine Sarkis</h1>
+                <h1 style="background: linear-gradient(to right bottom, rgb(1, 104, 248) , white, rgb(6, 226, 241));
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent; animation: name 10s ease-in-out infinite;">Antoine Sarkis</h1>
                 <div class="image_profile">
                     <button id="contact-btn" onclick="more_i();">contact Info :</button>
                     <h6 id="more_info">*click on "contact info" to see more details*</h6>
@@ -26,10 +25,26 @@
             </header>
             <div class="tools"><h4  id="h" class="clicked">Home</h4><h4 id="ab" class="clicked">About me</h4><h4 id="p" class="clicked" >Projects</h4></div>
             <div id="home">
+            <img src="planet1.png" class="planete">
+            <img src="planet2.png" class="planete">
+            <img src="planet3.png" class="planete">
+            <img src="planet4.png" class="planete">
             <section id="for_home">
                 <h3 class="aw"><span id="anime-web"></span></h3>
                 <p>Currently a student at 42 School and a self-learning, aspiring Web Designer/Developer.</p>
-                
+                <h3>Welcome to my web page feel free to have some touches :) </h3><h3>for example: </h3>
+                <ul>
+                    <li>The contact info buttom display some of my personal informations.
+                    </li>
+                    <li>Plus the The white mode check box , on the right of my name : that change some background colors and texts colors.
+                    </li>
+                    <li>Then it goes to the pages sections here its home you can click on about me to know more details about me ...
+                    </li>
+                    <li>Finally you can click on the projects play some games do calculations and much more.
+                    Note : there is more projects done by me using c and c++. final project snake is not done yet !
+                    Enjoy!... cheers.
+                    </li> 
+                </ul>
             </section>
             <section id="about">
                 <h3 id="click-button">About</h3>
@@ -61,6 +76,8 @@
                     <button class="link" id="r_p_s_btn">play r-p-s</button>
                     <li>Project 4: calculator </li>
                     <button class="link" id="calcul_btn">do calculations</button>
+                    <li>Project 5: snake with scores </li>
+                    <button class="link" id="snake_btn">play snake</button>
                 </ul>
             </section>
             
@@ -134,9 +151,22 @@
             <div id="item23"><i style="display: block; position: absolute; background-color: rgb(143, 142, 142); transform: translate(62.5px,-276.5px); color: black; border-radius: 2px; padding: 4px; z-index: 999;" class="fas fa-backspace"></i></div>
             <button id="back3" style="margin-top: 20px;">back to home page</button>
         </div>
+        <div id="game3">
+            <div id="place">
+                <div id="snake"></div>
+                <div id="food"></div>
+            </div>
+            <button class="move" id="left" onclick="changeDirection('left');">L</button>
+            <button class="move" id="right" onclick="changeDirection('right');">R</button>
+            <button class="move" id="up" onclick="changeDirection('up');">U</button>
+            <button class="move" id="down" onclick="changeDirection('down');">D</button>
+            <button id="snakeagain">play</button>
+            <button id="back4">back to home page</button>
+        </div>
         <script src="profile.js"></script>
         <script src="x_o.js"></script>
         <script src="r_p_s.js"></script>
         <script src="calculator.js"></script>
+        <script src="snake.js"></script>
     </body>
 </html>
