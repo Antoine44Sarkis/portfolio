@@ -404,20 +404,12 @@ img:nth-child(4) {
 #food {
     position: absolute;
     background-color: #e77305;
-    width: 12px;
-    height: 12px;
-    left: 60px; /* Center the food */
+    width: 10px;
+    height: 10px;
+    left: 60px;
     top: 60px;
 }
 
-#snake {
-    background-color: blue;
-    width: 12px;
-    height: 12px;
-    position: absolute;
-    top: 120px;
-    left: 120px;
-}
 
 button.move {
     margin: 5px;
