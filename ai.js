@@ -39,7 +39,22 @@ document.addEventListener("DOMContentLoaded", () => {
             response = "Yes! Antoine is planning to start a YouTube channel about coding.";
         } else if (userText.includes('phone') || userText.includes('number') || userText.includes('email') || userText.includes('contact') || userText.includes('reach you')) {
             response = "Click on contact Info button on the top of the page under or next my name ANTOINE SARKIS";
-        } 
+        }
+        else if (userText.includes('xo project')) {
+            response = "is a simple project play with a computer first you have choose a mode to play, to win you should get 3 x diagonally horizontally or vertically. You can check your score and if you want go back u can  click on botton and ul back to the primary page";
+        }
+        else if (userText.includes('rock paper scissors project')) {
+            response = "is a simple project play with a computer first you have choose rock or paper or scissors, rock beats scissors, paper beats rock and scissors beats paper. You can check your score and if you want go back u can  click on botton and ul back to the primary page";
+        }
+        else if (userText.includes('snake project')) {
+            response = "On pc you can use up, left , down and right arrow to move the more you eat the more your snake get longer and if you want go back u can  click on botton and ul back to the primary page.";
+        }
+        else if (userText.includes('casino game project')) {
+            response = "simple version of a casino slot spinner with a login page you enter with a balance worth of 1000$ then you can play you may loose or win . Do your bet and then spin.";
+        }
+        else if (userText.includes('calculator')) {
+            response = "do your own calculations , u can use () parantheses but always add * and / before or after depend on your calculation example you can do 2x(2+2) but you cannot do 2(2+2). AC : clear all or use the icon to clear one by one , % is module , x is the multiplication and if you want go back u can  click on botton and ul back to the primary page";
+        }
         else if (userText.includes('are you single')) {
             response = "Yes i am.";
         }
