@@ -394,7 +394,7 @@ img:nth-child(4) {
     flex-direction: column;
 }
 #place {
-    background-color: #0a0a0a;
+    background-color: #ddebec;
     width: 240px;
     height: 240px;
     position: relative;
@@ -431,4 +431,19 @@ button.move {
 #down{
     transform: translateY(-39.5px);
     margin: 0px 0px;
+}
+
+.info-ai{
+    color : rgb(10, 10, 10);
+    background-color: rgb(165, 163, 163);
+    padding: 0px 4px;
+}
+
+.ai{
+    background-color: rgb(28, 139, 158);
+    color: white;
+    border: 2px;
+    display: flex;
+    justify-content: center;
+    text-shadow:1px 1px rgb(5, 5, 5);
 }
