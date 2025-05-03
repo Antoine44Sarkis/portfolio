@@ -16,7 +16,6 @@ items.forEach(item => {
             }
         } else {
             try {
-                // Replace 'x' with '*' and '^' with '**' for JS evaluation
                 let expression = result.textContent
                     .replace(/x/g, '*')
                     .replace(/\^/g, '**');
@@ -24,8 +23,7 @@ items.forEach(item => {
                 // Handle square root with or without parentheses
                 expression = expression.replace(/√\(([^()]+)\)/g, (_, subExpr) => `Math.sqrt(${subExpr})`);
                 expression = expression.replace(/√(\d+(\.\d+)?)/g, (_, num) => `Math.sqrt(${num})`);
-
-                // Use Function to safely evaluate the expression
+                
                 let evalResult = new Function(`return (${expression});`)();
 
                 // Round result to avoid floating-point issues
