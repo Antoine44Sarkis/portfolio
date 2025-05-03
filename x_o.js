@@ -12,11 +12,11 @@ x_o.addEventListener('click', () => {
     ab.style.display = 'none';
     p.style.display = 'none';
     game.style.display = 'flex';
-    let isGameOver = false; // Track game state
+    let isGameOver = false;
     // Initialize cell styles
     allCells.forEach((cell, index) => {
         cell.style.color = 'black';
-        cell.textContent = ''; // Clear any existing text
+        cell.textContent = '';
         cell.style.backgroundColor = index % 2 === 0 ? 'lightgrey' : 'lightcyan';
     });
 
