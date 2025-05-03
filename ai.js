@@ -3,14 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const ai_rep = document.getElementById('send-ai');
     const botResponse = document.getElementById('bot-response');
     ai_rep.addEventListener('click', () => {
-        let userText = user_ask.value.toLowerCase().trim(); // Get user input and remove extra spaces
+        let userText = user_ask.value.toLowerCase().trim();
         let response = "Sorry, I don't understand that question. Try asking something else!";
 
         // 🔹 Questions About Antoine Sarkis (The Owner)
         if (userText.includes('owner') || userText.includes('antoine sarkis') || userText.includes('antoine')) {
             response = "Are you asking about my owner, Antoine Sarkis? You can ask about his age, studies, country, hobbies, or projects!";
         }
-        // 🔹 General Questions About Antoine Sarkis
         else if (userText.includes('name'))
         {
             response = "The owner of the web name is Antoine";
