@@ -6,8 +6,8 @@ body {
     color: rgb(147, 225, 247);
     /* background-color: rgb(85, 88, 88); */
     background-image: url('backpic1.jpg');
-    background-size: cover; /* Ensures the image covers the entire body */
-    background-position: center; /* Centers the image */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat; 
     margin: 0;
     padding: 20px;
@@ -41,15 +41,15 @@ header{
     border-radius: 30px 20px 20px 30px; 
     justify-content: center;
     background-image: url('backpic.jpg');
-    background-size: cover; /* Ensures the image covers the entire body */
-    background-position: center; /* Centers the image */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat; 
     z-index: 10;
 }
 .image_profile{
     background-image: url('backpic1.jpg');
-    background-size: cover; /* Ensures the image covers the entire body */
-    background-position: center; /* Centers the image */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat; 
     text-align: left;
     display: flex;
@@ -98,7 +98,7 @@ ul{
 
 .white-mode {
     background-color: white;
-    color: rgb(255, 250, 250);  /* Set text color to black for readability */
+    color: rgb(255, 250, 250);
 }
 
 .grey-mode{
@@ -230,7 +230,7 @@ h6{
     font-size: larger;
     font-weight: bolder;
     font-family: Arial, sans-serif;
-    white-space: nowrap; /* Prevent wrapping */
+    white-space: nowrap;
     overflow-x: hidden;
     border-right: 3px solid #e8ebee;
     display: inline-block;
@@ -281,12 +281,12 @@ h6{
 #Grid {
     display: grid;
     position: relative;
-    gap: 0px; /* Spacing between grid items */
-    grid-template-columns: 45px 45px 45px 45px; /* Defines column widths */
-    grid-template-rows: 45px 45px 45px 45px 45px 45px 45px;    /* Defines row heights */
+    gap: 0px;
+    grid-template-columns: 45px 45px 45px 45px; 
+    grid-template-rows: 45px 45px 45px 45px 45px 45px 45px;
 }
 .item {
-    background-color: lightgrey; /* For visibility of grid items */
+    background-color: lightgrey;
     display: flex;
     color: black;
     align-items: center;
