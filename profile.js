@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         element.addEventListener('click', () => {
             // Reset all elements' background colors
             Array.from(elements).forEach((el) => {
-                el.style.backgroundColor = ''; // Reset to default
+                el.style.backgroundColor = '';
             });
 
             // Set the clicked element's background color
@@ -125,14 +125,14 @@ h.addEventListener('click', () => {
 // Event listener for 'ab' (about_me and skills)
 ab.addEventListener('click', () => {
     hideSections();
-    about_me.style.display = 'block';  // Show About section
-    skills.style.display = 'block';    // Show Skills section
+    about_me.style.display = 'block';
+    skills.style.display = 'block';
 });
 
 // Event listener for 'p' (projects)
 p.addEventListener('click', () => {
     hideSections();
-    projects.style.display = 'block';  // Show Projects section
+    projects.style.display = 'block';
 });
 
 // Initially, hide all sections
