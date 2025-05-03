@@ -31,7 +31,7 @@ function isFoodOnSnake(foodX, foodY) {
 
 function placeFood() {
     do {
-        // Generate random food position (grid size is 10px)
+        // Generate random food position
         food_posx = Math.floor(Math.random() * (containerSize / gridSize)) * gridSize;
         food_posy = Math.floor(Math.random() * (containerSize / gridSize)) * gridSize;
     } while (isFoodOnSnake(food_posx, food_posy)); // Check for overlap with the snake
@@ -42,9 +42,10 @@ function placeFood() {
 }
 
 
-// Draw the snake
+// Drawing the snake
 function drawSnake() {
-    container.querySelectorAll('.snake-segment').forEach(segment => segment.remove()); // Clear old segments
+    // Clear old segments
+    container.querySelectorAll('.snake-segment').forEach(segment => segment.remove()); 
     snake.forEach((segment, index) => {
         const segmentDiv = document.createElement('div');
         segmentDiv.style.width = `${gridSize}px`;
@@ -52,13 +53,12 @@ function drawSnake() {
         segmentDiv.style.position = 'absolute';
         segmentDiv.style.left = `${segment.x}px`;
         segmentDiv.style.top = `${segment.y}px`;
-        segmentDiv.style.backgroundColor = index === 0 ? '#00ff00' : 'yellow'; // Head is green
+        segmentDiv.style.backgroundColor = index === 0 ? '#00ff00' : 'yellow';
         segmentDiv.classList.add('snake-segment');
         container.appendChild(segmentDiv);
     });
 }
 
-// Move the snake
 function moveSnake() {
     const head = { ...snake[0] }; // Clone the head position
     switch (currentDirection) {
@@ -103,7 +103,6 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Start the game
 function startGame() {
     snake = [{ x: 120, y: 120 }]; // Reset snake
     currentDirection = 'right'; // Reset direction
